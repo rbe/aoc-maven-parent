@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--
+        POM.
+    -->
+    <groupId>eu.artofcoding</groupId>
+    <artifactId>aoc-parent</artifactId>
+    <version>1.0.0</version>
+    <!--
+        Project Information.
+    -->
+    <name>art of coding Parent POM</name>
+    <url>http://www.art-of-coding.eu/</url>
+    <inceptionYear>2012</inceptionYear>
+    <developers>
+        <developer>
+            <name>Ralf Bensmann</name>
+            <email>ralf@art-of-coding.eu</email>
+        </developer>
+    </developers>
+    <!--
+    <contributors>
+        <contributor>
+        </contributor>
+    </contributors>
+    -->
+    <organization>
+        <name>art of coding</name>
+        <url>http://www.art-of-coding.eu/</url>
+    </organization>
+    <!--
+        Build Settings.
+    -->
+    <packaging>pom</packaging>
+    <!-- Properties -->
+    <properties>
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--
+            art of coding's Local Maven Repositories
+            <project-base>/<customer>/<project-name>/<module>
+        -->
+        <aoc.public.maven.repository>file:${aoc.basedir}/public.maven.repository/</aoc.public.maven.repository>
+        <aoc.private.maven.repository>file:${aoc.basedir}/private.maven.repository/</aoc.private.maven.repository>
+    </properties>
+    <repositories>
+        <!-- art of coding's Public Maven Repository (local) -->
+        <repository>
+            <id>public.maven.repository</id>
+            <name>Public Local Repository</name>
+            <url>${aoc.public.maven.repository}</url>
+        </repository>
+        <!-- art of coding's Public Maven Repository
+        <repository>
+            <id>aoc.public.maven.repository</id>
+            <name>art of coding's public.maven.repository on GitHub</name>
+            <url>https://raw.github.com/artofcoding/public.maven.repository/master</url>
+            <layout>default</layout>
+        </repository>
+        -->
+        <!-- art of coding's Private Maven Repository (local) -->
+        <repository>
+            <id>private.maven.repository</id>
+            <name>Private Local Repository</name>
+            <url>${aoc.private.maven.repository}</url>
+        </repository>
+        <!-- java.net -->
+        <repository>
+            <id>java.net</id>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+        <!-- Spring -->
+        <repository>
+            <id>spring-releases</id>
+            <name>Spring Maven RELEASE Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </repository>
+        <!-- JBoss -->
+        <repository>
+            <id>repository.jboss.org</id>
+            <name>JBoss Repository</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>private.maven.repository</id>
+            <name>Private Local Repository</name>
+            <url>${aoc.private.maven.repository}</url>
+        </repository>
+    </distributionManagement>
+</project>
