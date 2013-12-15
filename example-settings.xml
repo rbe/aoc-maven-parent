@@ -1,15 +1,18 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <!-- http://maven.apache.org/settings.html -->
     <profiles>
         <profile>
-            <id>aoc default</id>
+            <id>basic-settings</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <aoc.basedir>${user.home}/project</aoc.basedir>
+                <project.basedir>${user.home}/project</project.basedir>
+                <maven.basedir>${user.home}/maven</maven.basedir>
+                <maven.local.repo.public>file://${maven.basedir}/public-repo</maven.local.repo.public>
+                <maven.local.repo.private>file://${maven.basedir}/private-repo</maven.local.repo.private>
+                <maven.local.site>${maven.basedir}/site</maven.local.site>
             </properties>
         </profile>
     </profiles>
